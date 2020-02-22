@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check out the trip</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+
+    my trip to {{trip.destination}}
+    
+    <div class="container">
+        <div class="card text-white bg-info mb-3" style="width: auto; height: 400px;">
+            
+            <div class="card-header">{{trip.destination}}</div>
+            
+            <div class="card-body">
+                <h5 class="card-title">When: {{trip.start}}</h5>
+                <p class="card-text">End: {{trip.end}}</p>
+                <p>{{trip.plan}}</p>
+            </div>
+        </div>
+        <a href="/success">All Shows</a> | <a href="/editTrip/{{trip.id}}">Edit this Show</a>
+      
+        
+    </div>
+</body>
+</html>

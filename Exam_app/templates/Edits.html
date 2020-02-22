@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+
+
+        <form action='/update_trip/{{trip.id}}' method='POST'>
+            {% csrf_token %}
+            {% if messages %}
+            <ul class="messages">    
+                {% for message in messages %}    
+                    <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>    
+                {% endfor %}
+            </ul>
+            {% endif %}
+
+                <div class="form-group">
+                  <label >Desitnation</label>
+                  <input type="text" class="form-control" name="destination" placeholder="Where to">
+                </div>
+                <div class="form-group">
+                  <label >Start Date</label>
+                  <input type="date" class='form-control' name="start">
+                </div>
+                <div class="form-group">
+                    <label >End Date</label>
+                    <input type="date" class='form-control' name="end">
+                  </div>
+                <div class="form-group">
+                  <label >Plan</label>
+                  <textarea class="form-control" name="plan" rows="3"></textarea>
+
+                  <input type="submit" value="Update This trip" class="btn btn-primary"/>
+                </div>
+
+
+            <a href="/success">Dashboard</a>
+        </form>
+</body>
+</html>

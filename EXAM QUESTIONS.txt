@@ -1,0 +1,8 @@
+What is the flow of information in a typical request, from when we type an address on our browser, to when we receive the response on our browser?
+the browser will check the back-end database for the IP address it links to. Then send the clinet the request information.
+
+Why should we never render a page on a post request?
+it may cause the system to resubmit infomation twice on something like a checkout page causeing multipule purchases for one process. 
+
+Explain what session is, and why and when we use it.
+session is a temp holding place for webpages to pass users information between them and we should use it when we have a log in database of users. 
